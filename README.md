@@ -9,6 +9,8 @@ screenshots:
 ![image](https://github.com/user-attachments/assets/9fd0e351-0d4c-461a-b4f3-54c0f1294b81)
 ![image](https://github.com/user-attachments/assets/db5106c0-c0bd-4f15-9682-a45addb6ace5)
 ![image](https://github.com/user-attachments/assets/75612d1a-ab70-4f85-8462-6554fa7ac4f4)
+![image](https://github.com/user-attachments/assets/cbecd548-2afd-4f87-9960-2511a419c1d8)
+
 
 
 

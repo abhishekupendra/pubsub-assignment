@@ -1,0 +1,31 @@
+# Node.js
+node_modules/
+
+# TypeScript
+dist/
+build/
+*.tsbuildinfo
+
+# Environment variables
+.env
+
+# Docker
+*.pid
+docker-compose.override.yml
+
+# Database
+*.sqlite
+*.db
+*.sql
+
+# IDEs
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.swo
+
+# Others
+coverage/
+tmp/
+.cache/

@@ -1,0 +1,44 @@
+services:
+  publisher-service:
+    build:
+      context: ./publisher-service
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+    depends_on:
+      - redis
+      - postgres
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - DATABASE_URL=postgresql://postgres:asdf8925@postgres:5432/postgres
+
+  listener-service:
+    build:
+      context: ./listener-service
+      dockerfile: Dockerfile
+    depends_on:
+      - redis
+      - postgres
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - DATABASE_URL=postgresql://postgres:asdf8925@postgres:5432/postgres
+
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379" 
+
+  postgres:
+    image: postgres:17
+    restart: always
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: asdf8925
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:

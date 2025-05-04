@@ -10,7 +10,7 @@ services:
       - postgres
     environment:
       - REDIS_URL=redis://redis:6379
-      - DATABASE_URL=postgresql://postgres:asdf8925@postgres:5432/postgres
+      - DATABASE_URL=postgresql://postgres:********@postgres:5432/postgres
 
   listener-service:
     build:
@@ -21,7 +21,7 @@ services:
       - postgres
     environment:
       - REDIS_URL=redis://redis:6379
-      - DATABASE_URL=postgresql://postgres:asdf8925@postgres:5432/postgres
+      - DATABASE_URL=postgresql://postgres:********@postgres:5432/postgres
 
   redis:
     image: redis:alpine

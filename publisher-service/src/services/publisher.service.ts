@@ -19,7 +19,7 @@ export const handleReceiveData = async (data: any) => {
     return { message: 'Email is already associated with another user' };
   }
 
-  // Proceed to insert the new data if email is unique
+  // Insert the new data if email is unique
   const query = `
         INSERT INTO receiver_table (id, "user", class, age, email, inserted_at)
         VALUES ($1, $2, $3, $4, $5, $6)
